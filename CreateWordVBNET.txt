@@ -1,0 +1,10 @@
+	Dim wa As Microsoft.Office.Interop.Word.Application
+        Dim wd As Microsoft.Office.Interop.Word.Document
+        Dim wp As Microsoft.Office.Interop.Word.Paragraph
+
+        wa = CreateObject("Word.Application")
+        wd = wa.Documents.Add
+        wp = wd.Paragraphs.Add
+        wp.Range.Text = "This text will be displayed"
+        wd.SaveAs("C:\Users\Aidan\Desktop\sample.docx")
+        wa.Quit()
